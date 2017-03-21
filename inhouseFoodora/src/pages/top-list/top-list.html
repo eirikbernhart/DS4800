@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+  <button ion-item 
+  *ngFor="let item of topList" (click)="itemSelected(item)">
+
+
+    <ion-thumbnail  item-right>
+      <img src="star-4.5.png">
+    </ion-thumbnail >
+    <!--{{ item.starRating }}-->
+    {{ item.place }}
+    {{ item.name }}
+    
+    
+   
+
+    
+  </button>  
+</ion-list>
+</ion-content>
+
+<!-- [ngStyle]="{'background-image':'url(' + testPic + ')'}">-->
