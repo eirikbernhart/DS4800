@@ -1,7 +1,10 @@
-
 <ion-header>
 
   <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button (click)="modalDismiss()"><ion-icon name="arrow-back"></ion-icon></button>
+    </ion-buttons>
     <ion-title>{{dishName}}</ion-title>
   </ion-navbar>
 
@@ -9,13 +12,13 @@
 
 
 <ion-content no-padding>
- 
-  
+
+
 
 
   <ion-card>
 
-    <img src="tacoPizza.jpg"/>
+    <img src="tacoPizza.jpg" />
 
     <ion-item>
       <ion-icon name='logo-facebook' item-left style="color: #55acee"></ion-icon>
@@ -30,9 +33,9 @@
       <p>{{extraInfo}}</p>
     </ion-card-content>
 
-    
 
-    
+
+
 
     <ion-list>
       <ion-list-header>Options</ion-list-header>
@@ -48,13 +51,13 @@
       <ion-list-header>
         Næringsinnhold
         <ion-item>
-          <img src="NutVal1.PNG"/>
+          <img src="NutVal1.PNG" />
         </ion-item>
       </ion-list-header>
 
-   
+
     </ion-list>
-    
+
 
   </ion-card>
 

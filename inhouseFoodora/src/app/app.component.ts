@@ -16,7 +16,7 @@ import { AboutPage } from '../pages/about/about'
 })
 export class MyApp {
 
-  rootPage = AboutPage;
+  rootPage = TabsPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
