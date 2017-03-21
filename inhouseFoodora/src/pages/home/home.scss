@@ -1,5 +1,9 @@
 page-home {
 
+    .no-scroll .scroll-content{
+     overflow: hidden;
+    }
+
     .item:first-child{
   background: 
     linear-gradient(
