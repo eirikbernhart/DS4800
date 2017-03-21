@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -8,8 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  dish: string = "pizza"
+
   constructor(public navCtrl: NavController) {
 
+
   }
+
 
 }

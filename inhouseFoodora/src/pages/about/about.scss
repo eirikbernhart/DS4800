@@ -1,3 +1,37 @@
 page-about {
 
+#headlogo{
+    background: 
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url(http://3.bp.blogspot.com/-nkQ95DoK3GQ/Uq8IvhYmKdI/AAAAAAAADWc/MwBMXDUqokg/s1600/2013+Pizza+Wallpaper+HD.jpg);
+    background-size: 100% auto;
+    height: 27.5vh;
+    }
+
+    .item img{
+       height: 50%!important;
+       width: 50%!important;
+    }
+
+    .center{
+       margin-left: auto;
+       margin-right: auto;
+       display: block;
+    }
+
+    #dishlist img{
+
+        width: 70px!important;
+        height: 70px!important;
+
+    }
+
+    .break{
+        overflow-wrap: break-word!important;
+        white-space: normal;
+    }
+
 }
