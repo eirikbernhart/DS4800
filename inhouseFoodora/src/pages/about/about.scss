@@ -23,7 +23,6 @@ page-about {
     }
 
     #dishlist img{
-
         width: 70px!important;
         height: 70px!important;
 
@@ -36,6 +35,19 @@ page-about {
 
        .item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner{
         background-image: none;
+        
+    }
+
+    .item, .item-inner{
+        padding: 0!important;
+    }
+
+    .label{
+        margin: 0!important;
+    }
+
+    ion-thumbnail{
+        padding-left:3px; 
     }
 
 }
