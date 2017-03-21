@@ -1,3 +1,54 @@
 page-home {
 
+    .item:first-child{
+  background: 
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url(http://3.bp.blogspot.com/-nkQ95DoK3GQ/Uq8IvhYmKdI/AAAAAAAADWc/MwBMXDUqokg/s1600/2013+Pizza+Wallpaper+HD.jpg);
+    background-size: 100% auto;
+    height: 27.5vh;
+    }
+    .item:nth-child(2){
+        background: 
+    linear-gradient(
+      rgba(241, 196, 15,0.45), 
+      rgba(241, 196, 15,0.45)
+    ),
+    url(http://i.imgur.com/9qtVISH.jpg);
+    background-size: 100% auto;
+        height: 27.5vh;
+    }
+     .item:nth-child(3){
+          background: 
+    linear-gradient(
+      rgba(52, 73, 94,0.45), 
+      rgba(52, 73, 94,0.45)
+    ),
+    url(http://s3-eu-west-1.amazonaws.com/kotaabouttime/wp-content/uploads/2015/07/10004136/SALMONTINI-.-high-res..jpg);
+    background-size: 100% auto;
+        height: 27.5vh;
+    }
+
+    ion-icon{
+        color: whitesmoke;
+        font-size: 3em!important;
+    }
+
+    .list{
+        margin: 0!important;
+    }
+
+    .item ion-thumbnail ion-img, .item ion-thumbnail img{
+        height: 100px!important;
+        width: 100px!important;
+    }
+
+    .item h1{
+        color: #FFF;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
 }
