@@ -1,13 +1,15 @@
 top-list {
     
-    .item-ios ion-thumbnail ion-img, .item-ios ion-thumbnail img {
-    width: 56px !important;
-    height: 20% !important;
+    .item ion-thumbnail ion-img, .item ion-thumbnail img {
+        width: 56px !important;
+        height: 20% !important;
     }   
 
-    .item-ios ion-thumbnail {
-    min-width: 56px;
-    min-height: 0px;
-}
+    .item ion-thumbnail {
+        min-width: 56px;
+        min-height: 0px;
+    }
+
+    
 
 }
