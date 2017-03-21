@@ -15,8 +15,8 @@ export class ToplistPage {
 
   constructor(public navCtrl: NavController) {
       this.topList.push(
-        new ListItem("Peppes", 1),
-        new ListItem("Big Horn", 2)
+          new ListItem("Peppes", 1),
+          new ListItem("Big Horn", 2)
         );
   }
 
