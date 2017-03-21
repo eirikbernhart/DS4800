@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content no-padding>
-  <ion-list>
+  <ion-list no-lines>
     <ion-item id="headlogo">
       <ion-thumbnail>
         <img class="center" src="peppes.png">
@@ -36,27 +36,39 @@
               <img src="peppes.png">
             </ion-thumbnail>
             <h2>Mighty meat</h2>
+            <p class="break">Insane meat-to-bread ratio</p>
+            <ion-badge item-right>
+              250,-
+            </ion-badge>
           </ion-item>
         </ion-list>
 
         <ion-list *ngSwitchCase="'sides'">
           <ion-item>
             <ion-thumbnail item-left>
-              <img src="peppes.png">
+              <img src="http://socialnewsdaily.com/wp-content/uploads/2016/06/garlic_bread.jpg">
             </ion-thumbnail>
             <h2>Garlic bread</h2>
+            <p class="break">Crispy as fuck</p>
+            <ion-badge item-right>
+              90,-
+            </ion-badge>
           </ion-item>
         </ion-list>
 
         <ion-list *ngSwitchCase="'drinks'">
           <ion-item>
             <ion-thumbnail item-left>
-              <img src="peppes.png">
+              <img src="http://freevectorlogo.net/wp-content/uploads/2012/11/smirnoff-vodka-vector-logo-400x400.png">
             </ion-thumbnail>
-            <h2>Cola</h2>
+            <h2>Vodka</h2>
+            <p>To make you drunk</p>
+            <ion-badge item-right>
+              400,-
+            </ion-badge>
           </ion-item>
         </ion-list>
-        
+
       </div>
     </ion-item>
   </ion-list>
