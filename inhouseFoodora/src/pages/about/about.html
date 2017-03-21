@@ -6,6 +6,59 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content no-padding>
+  <ion-list>
+    <ion-item id="headlogo">
+      <ion-thumbnail>
+        <img class="center" src="peppes.png">
+      </ion-thumbnail>
+    </ion-item>
+
+    <ion-item id="dishlist">
+      <div padding>
+        <ion-segment [(ngModel)]="dish">
+          <ion-segment-button value="pizza">
+            Pizza
+          </ion-segment-button>
+          <ion-segment-button value="sides">
+            Sides
+          </ion-segment-button>
+          <ion-segment-button value="drinks">
+            Drinks
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div [ngSwitch]="dish">
+        <ion-list *ngSwitchCase="'pizza'">
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="peppes.png">
+            </ion-thumbnail>
+            <h2>Mighty meat</h2>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'sides'">
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="peppes.png">
+            </ion-thumbnail>
+            <h2>Garlic bread</h2>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'drinks'">
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="peppes.png">
+            </ion-thumbnail>
+            <h2>Cola</h2>
+          </ion-item>
+        </ion-list>
+        
+      </div>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
