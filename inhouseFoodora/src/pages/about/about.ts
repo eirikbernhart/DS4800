@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, ViewController } from 'ionic-angular';
 import { DetailsPage } from '../details-page/details-page';
+import { MockedDishes } from '../details-page/mocked-dishes';
+
 
 @Component({
   selector: 'page-about',
@@ -8,14 +10,21 @@ import { DetailsPage } from '../details-page/details-page';
 })
 export class AboutPage {
 
-  dish: string = "pizza"
+  category: string = "pizza"
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(
+    public navCtrl: NavController, 
+    public modalCtrl: ModalController,
+    public viewCtrl: ViewController,
+    public mockedDishes: MockedDishes
+    ) {
 
   }
 
-  openModal(dish: string){
-    let modal = this.modalCtrl.create(DetailsPage);
+  openModal(dish){
+    let modal = this.modalCtrl.create(DetailsPage, {
+      dish});
+      
     modal.present();
   }
 

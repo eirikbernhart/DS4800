@@ -16,7 +16,7 @@
 
     <ion-item id="dishlist">
       <div padding>
-        <ion-segment [(ngModel)]="dish">
+        <ion-segment [(ngModel)]="category">
           <ion-segment-button value="pizza">
             Pizza
           </ion-segment-button>
@@ -29,23 +29,13 @@
         </ion-segment>
       </div>
 
-      <div [ngSwitch]="dish">
+      <div [ngSwitch]="category">
         <ion-list *ngSwitchCase="'pizza'">
-          <button ion-item (click)="openModal(easyrider)">
+          <button ion-item *ngFor="let dish of mockedDishes.peppesDishes" (click)="openModal(dish)">
             <ion-thumbnail item-left>
               <img src="peppes.png">
             </ion-thumbnail>
-            <h2>EASY RIDER</h2>
-            <p class="break">Insane meat-to-bread ratio</p>
-            <ion-badge item-right>
-              250,-
-            </ion-badge>
-          </button>
-            <button ion-item (click)="openModal(easyrider)">
-            <ion-thumbnail item-left>
-              <img src="peppes.png">
-            </ion-thumbnail>
-            <h2>EASY RIDER</h2>
+            <h2>{{dish.name}}</h2>
             <p class="break">Insane meat-to-bread ratio</p>
             <ion-badge item-right>
               250,-

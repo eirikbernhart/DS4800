@@ -5,7 +5,7 @@
     <ion-buttons start>
       <button ion-button (click)="modalDismiss()"><ion-icon name="arrow-back"></ion-icon></button>
     </ion-buttons>
-    <ion-title>{{dishName}}</ion-title>
+    <ion-title>{{dish.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -27,9 +27,6 @@
     </ion-item>
 
     <ion-card-content>
-      <ion-card-title>
-        Easy Rider
-      </ion-card-title>
       <p>{{extraInfo}}</p>
     </ion-card-content>
 

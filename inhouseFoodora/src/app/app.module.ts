@@ -6,6 +6,8 @@ import { ToplistPage } from '../pages/top-list/top-list';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailsPage } from '../pages/details-page/details-page';
+import { MockedDishes } from '../pages/details-page/mocked-dishes';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,6 @@ import { DetailsPage } from '../pages/details-page/details-page';
     TabsPage,
     DetailsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [MockedDishes, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
