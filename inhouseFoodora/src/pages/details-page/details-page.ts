@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { DomSanitizer } from '@angular/platform-browser';
 import { MockedDishes } from '../details-page/mocked-dishes';
 
 
@@ -19,7 +20,8 @@ export class DetailsPage {
     public navParams: NavParams, 
     public viewCtrl: ViewController,
     public mockedDishes: MockedDishes,
-    public inputData: NavParams
+    public inputData: NavParams,
+    private sanitizer: DomSanitizer
     ) {
       this.dish = this.inputData.get('dish');
     }
@@ -34,5 +36,5 @@ export class DetailsPage {
   }
 
 
-
+  
 }

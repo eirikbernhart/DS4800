@@ -8,6 +8,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DetailsPage } from '../pages/details-page/details-page';
 import { MockedDishes } from '../pages/details-page/mocked-dishes';
 
+import { ToDecimal } from "../pipes/to-decimal";
+import { OrderBy } from "../pipes/order-by";
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,9 @@ import { MockedDishes } from '../pages/details-page/mocked-dishes';
     ToplistPage,
     HomePage,
     TabsPage,
-    DetailsPage
+    DetailsPage,
+    ToDecimal,
+    OrderBy
   ],
   imports: [
     IonicModule.forRoot(MyApp)

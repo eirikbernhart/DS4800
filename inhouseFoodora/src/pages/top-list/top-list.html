@@ -1,29 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Top-10
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list no-lines>
-  <button ion-item 
-  *ngFor="let item of topList" (click)="goToSuggested(item)">
-
-
-    <ion-thumbnail  item-right>
+  <ion-item *ngFor="let item of topList" (click)="goToSuggested(item)">
+    <!--<ion-thumbnail  item-right>
       <img src="star-4.5.png">
-    </ion-thumbnail >
-    <!--{{ item.starRating }}-->
-    {{ item.place }}
-    {{ item.name }}
-    
-    
-   
+    </ion-thumbnail >-->
 
-    
-  </button>  
+    {{ item.topListPos }}.
+    {{ item.name }}
+    <ion-thumbnail item-left>
+      <img [src]='sanitizer.bypassSecurityTrustResourceUrl(item.image)'/>
+    </ion-thumbnail>
+    <ion-item>
+      <ion-icon name='logo-facebook' item-right style="color: #55acee"></ion-icon>
+      <ion-badge item-right>{{item.rating | decimal}}K</ion-badge>
+    </ion-item>
+
+  </ion-item>
+
 </ion-list>
 </ion-content>
 

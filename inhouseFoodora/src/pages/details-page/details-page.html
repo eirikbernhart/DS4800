@@ -18,16 +18,17 @@
 
   <ion-card>
 
-    <img src="tacoPizza.jpg" />
+    <!--<img src="data:image/JPEG;base64, {{dish.image}}" />-->
+    <img [src]='sanitizer.bypassSecurityTrustResourceUrl(dish.image)'/>
 
     <ion-item>
       <ion-icon name='logo-facebook' item-left style="color: #55acee"></ion-icon>
       Likes
-      <ion-badge item-right>2k</ion-badge>
+      <ion-badge item-right>{{dish.rating | decimal}}K</ion-badge>
     </ion-item>
 
     <ion-card-content>
-      <p>{{extraInfo}}</p>
+      <p>{{dish.descript}}</p>
     </ion-card-content>
 
 
@@ -37,7 +38,7 @@
     <ion-list>
       <ion-list-header>Options</ion-list-header>
       <ion-item>
-        <ion-label>Sjalottlauk</ion-label>
+        <ion-label>Liten</ion-label>
         <ion-checkbox color="dark" checked="false"></ion-checkbox>
       </ion-item>
       <ion-item>
