@@ -3,8 +3,8 @@ page-about {
 #headlogo{
     background: 
     linear-gradient(
-      rgba(255, 0, 0, 0.45), 
-      rgba(255, 0, 0, 0.45)
+      map-get($colors , redish ), 
+      map-get($colors , redish )
     ),
     url(http://3.bp.blogspot.com/-nkQ95DoK3GQ/Uq8IvhYmKdI/AAAAAAAADWc/MwBMXDUqokg/s1600/2013+Pizza+Wallpaper+HD.jpg);
     background-size: 100% auto;
