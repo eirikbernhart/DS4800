@@ -35,6 +35,10 @@ export class DetailsPage {
     this.viewCtrl.dismiss();
   }
 
+  likeDish(){
+    this.dish.rating = this.dish.rating + 0.1;
+  }
+
 
   
 }

@@ -7,8 +7,8 @@ page-home {
     .item:first-child{
   background: 
     linear-gradient(
-      rgba(255, 0, 0, 0.45), 
-      rgba(255, 0, 0, 0.45)
+      map-get($colors , redish ), 
+      map-get($colors , redish )
     ),
     url(http://3.bp.blogspot.com/-nkQ95DoK3GQ/Uq8IvhYmKdI/AAAAAAAADWc/MwBMXDUqokg/s1600/2013+Pizza+Wallpaper+HD.jpg);
     background-size: 100% auto;
@@ -17,20 +17,20 @@ page-home {
     .item:nth-child(2){
         background: 
     linear-gradient(
-      rgba(241, 196, 15,0.45), 
-      rgba(241, 196, 15,0.45)
+      map-get($colors , yellowish ), 
+      map-get($colors , yellowish )
     ),
-    url(http://i.imgur.com/9qtVISH.jpg);
+    url(http://dbstatic.no/60403330.jpg?imageId=60403330&x=0&y=0&cropw=100.00&croph=100.00&width=1024&height=576);
     background-size: 100% auto;
         height: 27.5vh;
     }
      .item:nth-child(3){
           background: 
     linear-gradient(
-      rgba(52, 73, 94,0.45), 
-      rgba(52, 73, 94,0.45)
+      map-get($colors , greyish ), 
+      map-get($colors , greyish )
     ),
-    url(http://s3-eu-west-1.amazonaws.com/kotaabouttime/wp-content/uploads/2015/07/10004136/SALMONTINI-.-high-res..jpg);
+    url(http://dailyscandinavian.com/wp-content/uploads/2017/03/210317-sushi-in-oslo.jpg);
     background-size: 100% auto;
         height: 27.5vh;
     }
