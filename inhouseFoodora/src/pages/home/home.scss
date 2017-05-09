@@ -36,9 +36,20 @@ page-home {
     }
 
     ion-icon{
-        color: whitesmoke;
-        font-size: 3em!important;
+        color: whitesmoke !important;
+        font-size: 3em !important;
     }
+
+    .pref-icon {
+            color: black!important;
+            font-size: 2em!important;
+        }
+
+    button {
+        background-color: transparent !important;
+    }
+    
+    
 
     .list{
         margin: 0!important;

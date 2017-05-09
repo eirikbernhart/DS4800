@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailsPage } from '../pages/details-page/details-page';
 import { MockedDishes } from '../pages/details-page/mocked-dishes';
+import { Suggestions } from '../pages/home/suggestions';
+import { PreferencesPage } from '../pages/preferences/preferences';
+import { ShoppingPage } from '../pages/shopping/shopping';
 
 import { ToDecimal } from "../pipes/to-decimal";
 import { OrderBy } from "../pipes/order-by";
@@ -22,7 +25,9 @@ import { OrderBy } from "../pipes/order-by";
     TabsPage,
     DetailsPage,
     ToDecimal,
-    OrderBy
+    OrderBy,
+    PreferencesPage,
+    ShoppingPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -34,8 +39,11 @@ import { OrderBy } from "../pipes/order-by";
     ToplistPage,
     HomePage,
     TabsPage,
-    DetailsPage
+    DetailsPage,
+    PreferencesPage,
+    ShoppingPage
   ],
-  providers: [MockedDishes, {provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [MockedDishes, Suggestions
+  , {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

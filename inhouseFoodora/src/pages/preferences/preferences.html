@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Preferanser</ion-title>
+     <ion-buttons start>
+      <button ion-button (click)="modalDismiss()"><ion-icon name="arrow-back"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="no-scroll" padding>
+
+  <ion-list>
+
+        <ion-item>
+           <ion-label>Mat typer</ion-label>
+           <ion-select [(ngModel)]="preferredDishes" multiple="true" 
+           selectedText="...">
+             <ion-option value="Pizza">Pizza</ion-option>
+             <ion-option value="Kjøtt">Kjøtt</ion-option>
+             <ion-option value="Fisk">Fisk</ion-option>
+             <ion-option value="Vegan">Vegan</ion-option>
+             <ion-option value="Vegetarianer">Vegetarianer</ion-option>
+             <ion-option value="Desserter">Desserter</ion-option>
+           </ion-select>
+        </ion-item>
+   
+    </ion-list>
+
+    <ion-card *ngFor="let pref of preferredDishes">
+        <ion-item class="prefItems">
+           {{pref}}
+        </ion-item>
+
+        
+    </ion-card>
+
+</ion-content>

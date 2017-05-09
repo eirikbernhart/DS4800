@@ -1,11 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Aktuelt</ion-title>
+
+    <ion-buttons start>
+      <button (click)="openModal()">
+        <ion-icon class="pref-icon" name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button  (click)="openShoppingModal()">
+        <ion-icon class="pref-icon" name="cart"></ion-icon>
+      </button>  
+    </ion-buttons>
+       
   </ion-navbar>
 </ion-header>
 
 <ion-content class="no-scroll" no-padding>
+
   <ion-list no-lines>
+
     <button ion-item (click)="goToDetail()">
       <ion-thumbnail item-left>
         <img src="peppes.png">
@@ -30,4 +44,5 @@
     </button>
 
   </ion-list>
+
 </ion-content>
