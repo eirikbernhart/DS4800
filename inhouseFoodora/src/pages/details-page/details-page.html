@@ -25,6 +25,7 @@
       <ion-icon name='logo-facebook' item-left style="color: #55acee"></ion-icon>
       Likes
       <ion-badge item-right>{{dish.rating | decimal}}K</ion-badge>
+      <ion-icon style="color: #387ef5" (click)="likeDish()" name="thumbs-up" item-right padding> Liker </ion-icon>
     </ion-item>
 
     <ion-card-content>
