@@ -37,7 +37,6 @@ export class DetailsPage {
 
   likeDish(){
     this.dish.rating = this.dish.rating + 0.1;
-    console.log(this.dish.rating);
   }
 
 
