@@ -14,19 +14,20 @@ export class SettingsPage {
 
   public modal;
   public modalData = [];
+  public preferredDishes: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  public viewCtrl: ViewController, public modalCtrl: ModalController, public toast: ToastController) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+    console.log('Data from parent: ' + this.navParams.get('param'));
   }
 
   modalDismiss() {
-    this.viewCtrl.dismiss();
+    this.viewCtrl.dismiss(this.modalData);
   }
 
   openModalPref(){
-    this.modal = this.modalCtrl.create(PreferencesPage, {param:  this.modalData});
+    this.modal = this.modalCtrl.create(PreferencesPage, {param:  this.navParams.get('param')});
     this.modal.onDidDismiss(data => {
       console.log("Data: " + data);
       this.modalData = data;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AboutPage } from '../about/about'
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, ViewController } from 'ionic-angular';
 import { PreferencesPage } from '../preferences/preferences';
 import { SettingsPage } from '../settings/settings';
 import { ShoppingPage } from '../shopping/shopping';
@@ -19,6 +19,7 @@ export class HomePage {
 
   public modal;
   public modalData = [];
+
   public shoppingModal;
   public shoppingModalData = [];
 
@@ -29,13 +30,19 @@ export class HomePage {
     public navCtrl: NavController,
     public modalCtrl: ModalController,
     public suggestions: Suggestions,
+    public viewCtrl: ViewController
     
     ) {
       
   }
 
   ionViewDidEnter() {
-    console.log('Modaldata: ' + this.modalData);
+    console.log('Data: ' + this.modalData);
+    if(this.modalData.length < 0) {
+        this.modalData = [];
+      } else {
+        this.modalData = this.modalData;
+      }
     
   }
     
@@ -46,6 +53,11 @@ export class HomePage {
 
   openSettings() {
      this.modal = this.modalCtrl.create(SettingsPage, {param:  this.modalData});
+     this.modal.onDidDismiss(data => {
+      console.log("Data: " + data);
+      this.modalData = data;
+      
+    })
      this.modal.present();
   }
   
