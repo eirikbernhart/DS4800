@@ -13,6 +13,9 @@ import { ShoppingPage } from '../pages/shopping/shopping';
 
 import { ToDecimal } from "../pipes/to-decimal";
 import { OrderBy } from "../pipes/order-by";
+import { LoginPage } from "../pages/login/login";
+import { SettingsPage } from "../pages/settings/settings";
+
 
 
 
@@ -27,7 +30,9 @@ import { OrderBy } from "../pipes/order-by";
     ToDecimal,
     OrderBy,
     PreferencesPage,
-    ShoppingPage
+    ShoppingPage,
+    LoginPage,
+    SettingsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -41,7 +46,9 @@ import { OrderBy } from "../pipes/order-by";
     TabsPage,
     DetailsPage,
     PreferencesPage,
-    ShoppingPage
+    ShoppingPage,
+    LoginPage,
+    SettingsPage
   ],
   providers: [MockedDishes, Suggestions
   , {provide: ErrorHandler, useClass: IonicErrorHandler}]

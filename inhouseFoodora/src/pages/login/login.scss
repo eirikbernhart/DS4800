@@ -1,0 +1,59 @@
+
+
+    
+@mixin platform-background-image($url) {
+     background: url($url) no-repeat center center fixed;
+}
+
+    $image: "../assets/images/LoginPic.jpg";
+
+    .ios {
+        page-login {
+            .content-wrapper {
+                @include platform-background-image($image);
+            }
+        }
+    }
+
+    .md {
+        page-login {
+            .content-wrapper {
+                @include platform-background-image($image);
+            }
+        }
+    }
+
+.login-wrapper {
+
+    padding: 16px;
+    position: absolute;
+    top: 10%;
+
+}
+
+#user {
+            background-color: rgba(78,52,46, 0.7) !important;
+            
+    }
+
+    #pass {
+            background-color: rgba(78,52,46, 0.7) !important;
+    }
+
+    #textCSS {
+        color: wheat !important;
+    }
+
+   
+
+page-login {
+    ion-list ion-item {
+        background-color: transparent !important;
+    }
+
+     ion-label {
+        color: wheat !important;
+    }
+}
+
+

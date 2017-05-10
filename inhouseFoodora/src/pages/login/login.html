@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Logg inn</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content-wrapper">
+
+    <ion-list no-lines class="login-wrapper">
+        <ion-item id="user">
+            <ion-label fixed>Epost</ion-label>
+            <ion-input type="text" id="textCSS"></ion-input>
+        </ion-item>
+
+        <ion-item id="user">
+            <ion-label>Passord</ion-label>
+            <ion-input type="password" id="textCSS"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <button ion-button color="secondary" (click)="fakeLogin()">Logg inn </button>
+            <button ion-button (click)="fakeLogin()">Registrer deg</button>
+        </ion-item> 
+    </ion-list> 
+</ion-content>

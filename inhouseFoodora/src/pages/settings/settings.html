@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="modalDismiss()"><ion-icon name="arrow-back"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list no-lines>
+
+        <ion-item>
+          <button ion-item (click)="openLogin()">Logg inn</button>
+        </ion-item>
+        <ion-item>
+          <button ion-item (click)="openModalPref()">Preferanser</button>
+        </ion-item>
+   
+    </ion-list>
+
+</ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AboutPage } from '../about/about'
 import { NavController, ModalController } from 'ionic-angular';
 import { PreferencesPage } from '../preferences/preferences';
+import { SettingsPage } from '../settings/settings';
 import { ShoppingPage } from '../shopping/shopping';
 import { Suggestions } from '../home/suggestions';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -43,6 +44,10 @@ export class HomePage {
     this.navCtrl.push(AboutPage);
   }
 
+  openSettings() {
+     this.modal = this.modalCtrl.create(SettingsPage, {param:  this.modalData});
+     this.modal.present();
+  }
   
   openModal(){
     this.modal = this.modalCtrl.create(PreferencesPage, {param:  this.modalData});

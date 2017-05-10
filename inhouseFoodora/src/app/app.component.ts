@@ -6,7 +6,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { DetailsPage } from '../pages/details-page/details-page';
 
-import { AboutPage } from '../pages/about/about'
+import { AboutPage } from '../pages/about/about';
+import { LoginPage } from '../pages/login/login';
+
 
 
 
