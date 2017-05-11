@@ -30,6 +30,14 @@
 
     <ion-card-content>
       <p>{{dish.descript}}</p>
+      
+      <ion-buttons end>
+              <button ion-button icon-only small color="light" (click)="addToCart()">
+                  <div id="price" style="margin-left: 10px">{{dish.price}},-</div>
+                  <ion-icon style="font-size: 25px"  name="add-circle"></ion-icon>
+              </button> 
+      </ion-buttons>
+
     </ion-card-content>
 
 
@@ -37,7 +45,7 @@
 
 
     <ion-list>
-      <ion-list-header>Options</ion-list-header>
+      <ion-list-header>Ekstra</ion-list-header>
       <ion-item>
         <ion-label>Liten</ion-label>
         <ion-checkbox color="dark" checked="false"></ion-checkbox>

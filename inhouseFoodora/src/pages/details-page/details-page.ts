@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { NavController, NavParams, ViewController, ToastController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MockedDishes } from '../details-page/mocked-dishes';
 
@@ -21,7 +21,8 @@ export class DetailsPage {
     public viewCtrl: ViewController,
     public mockedDishes: MockedDishes,
     public inputData: NavParams,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    public toast: ToastController
     ) {
       this.dish = this.inputData.get('dish');
     }
@@ -37,6 +38,16 @@ export class DetailsPage {
 
   likeDish(){
     this.dish.rating = this.dish.rating + 0.1;
+  }
+
+  addToCart() {
+     let toast = this.toast.create({
+      message: this.dishName + " er lagt til handle kurv!",
+      duration: 1500,
+      position: "middle",
+      cssClass: "toastSuccess",
+    });
+    toast.present();
   }
 
 

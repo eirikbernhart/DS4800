@@ -20,12 +20,7 @@ export class PreferencesPage {
 
   ionViewDidLoad() {
     this.preferredDishes = this.navParams.get('param');
-    /*if(this.navParams.get('param').toString() == "") {
-          console.log('Da er den tom!!!');
-    } else {
-          this.preferredDishes = this.navParams.get('param');
-          console.log('Da er den ikke tom!');
-    }*/
+    
   }
 
   modalDismiss() {

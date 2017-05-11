@@ -21,7 +21,6 @@ export class SettingsPage {
   ionViewDidLoad() {
     console.log('Data from parent: ' + this.navParams.get('param'));
     this.modalData = this.navParams.get('param');
-    //console.log("Data from viewCtrl: " + this.viewCtrl.getContent());
   }
 
   modalDismiss() {
@@ -30,7 +29,6 @@ export class SettingsPage {
 
   openModalPref(){
    
-    //this.modal = this.modalCtrl.create(PreferencesPage, {param:  this.navParams.get('param')});
     this.modal = this.modalCtrl.create(PreferencesPage, {param:  this.modalData});
     
     this.modal.onDidDismiss(data => {
