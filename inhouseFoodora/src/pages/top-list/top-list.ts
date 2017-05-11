@@ -25,12 +25,12 @@ export class ToplistPage {
     ) {
       this.topList.push(
           new Dish("Easy Rider", 134, "Tacokrydret kjøttdeig, saftige tomatskiver og rødløk.",
-            "tacoPizza.jpg", 3.800, 1),
+            "tacoPizza.jpg", 3.800, 1, "peppes"),
           new Dish("New York Strip", 379, 
             "Marmorert ytrefilet med fett lokk, spesielt ettertraktet for sin unike smak! Med aspargesbønner, rødløk, ferske gulrotstaver og valgfrie poteter.",
-            "newYorkStrip.jpg", 3.100, 2),
+            "newYorkStrip.jpg", 3.100, 2, "bighorn"),
           new Dish("Heavy Heaven", 160,"Pepperoni, hvitløkskrydrede kjøttboller, marinert biffkjøtt, rødløk og oregano.",
-             "heavyHeaven.jpg", 2.800, 3)
+             "heavyHeaven.jpg", 2.800, 3, "peppes")
         );
   }
 

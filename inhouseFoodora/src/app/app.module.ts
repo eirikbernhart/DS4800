@@ -16,6 +16,7 @@ import { OrderBy } from "../pipes/order-by";
 import { LoginPage } from "../pages/login/login";
 import { SettingsPage } from "../pages/settings/settings";
 
+import { ShoppingCart } from '../providers/shopping-cart';
 
 
 
@@ -50,7 +51,10 @@ import { SettingsPage } from "../pages/settings/settings";
     LoginPage,
     SettingsPage
   ],
-  providers: [MockedDishes, Suggestions
-  , {provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    MockedDishes, 
+    Suggestions,
+    ShoppingCart,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

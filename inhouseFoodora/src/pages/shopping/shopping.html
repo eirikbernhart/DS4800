@@ -7,9 +7,83 @@
         <button ion-button (click)="modalDismiss()"><ion-icon name="arrow-back"></ion-icon></button>
       </ion-buttons>  </ion-navbar>
 
+  
+
 </ion-header>
 
 
 <ion-content padding>
 
+
+  <!--<ion-list>
+    <ion-list-header>Peppes</ion-list-header>
+    <ion-item ion-item *ngFor="let item of shopServ.shoppingCart let i = index" [attr.data-index]="i">
+         {{shopServ.shoppingCart[i].name}}
+         : {{shopServ.shoppingCart[i].price}},-
+    </ion-item>
+  </ion-list>-->
+
+
+  <ion-list no-lines>
+        <div *ngIf="shopServ.shoppingCartPeppes.length == 0 && shopServ.shoppingCartBigHorn.length == 0">
+          Handekurven er tom!
+        </div>
+
+    <div *ngIf="shopServ.shoppingCartPeppes.length > 0">
+    <ion-list no-lines>
+      <ion-list-header>Peppes</ion-list-header>
+      <ion-item ion-item *ngFor="let item of shopServ.shoppingCartPeppes let i = index" [attr.data-index]="i">
+          {{shopServ.shoppingCartPeppes[i].name}}
+          : {{shopServ.shoppingCartPeppes[i].price}},-
+      </ion-item>
+
+        
+
+    </ion-list>
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <div> Å betale: {{totalCostPeppes}},-</div>
+                  </ion-col>
+                  <ion-col>
+                      <div>
+                        Reserver bord
+                        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+                      </div>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+          <button ion-button>Betal</button>
+    </div>
+    
+    <div *ngIf="shopServ.shoppingCartBigHorn.length > 0">
+    <ion-list>
+      <ion-list-header>Big Horn</ion-list-header>
+      <ion-item ion-item *ngFor="let item of shopServ.shoppingCartBigHorn let i = index" [attr.data-index]="i">
+          {{shopServ.shoppingCartBigHorn[i].name}}
+          : {{shopServ.shoppingCartBigHorn[i].price}},-
+      </ion-item>
+      
+    </ion-list>
+    </div>
+
+  </ion-list>
+
+     <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <div> Å betale: {{totalCostBigHorn}},-</div>
+                  </ion-col>
+                  <ion-col>
+                      <div>
+                        Reserver bord
+                        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+                      </div>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+          <button ion-button>Betal</button>
+
+
+ 
 </ion-content>

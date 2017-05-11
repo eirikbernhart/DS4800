@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController, ToastController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MockedDishes } from '../details-page/mocked-dishes';
+import { ShoppingCart } from '../../providers/shopping-cart';
+
 
 
 @Component({
@@ -22,14 +24,15 @@ export class DetailsPage {
     public mockedDishes: MockedDishes,
     public inputData: NavParams,
     private sanitizer: DomSanitizer,
-    public toast: ToastController
+    public toast: ToastController,
+    public shopServ: ShoppingCart
     ) {
       this.dish = this.inputData.get('dish');
     }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailsPagePage');
-    //console.log("Hva er dish nå: " + this.dish.name);
+    this.dish = this.inputData.get('dish');
+    console.log("Hva er dish nå: " + this.dish.name);
   }
 
   modalDismiss() {
@@ -42,12 +45,13 @@ export class DetailsPage {
 
   addToCart() {
      let toast = this.toast.create({
-      message: this.dishName + " er lagt til handle kurv!",
+      message: this.dish.name + " er lagt til handle kurv!",
       duration: 1500,
       position: "middle",
       cssClass: "toastSuccess",
     });
     toast.present();
+    this.shopServ.addToCart(this.dish, this.dish.seller);
   }
 
 
