@@ -52,8 +52,9 @@ export class DetailsPage {
     });
     toast.present();
     this.shopServ.addToCart(this.dish, this.dish.seller);
+    this.modalDismiss();
   }
-
+  
 
   
 }
